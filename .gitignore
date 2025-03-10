@@ -1,0 +1,5 @@
+.vs/
+venv/
+.DS_Store
+db.sqlite3
+

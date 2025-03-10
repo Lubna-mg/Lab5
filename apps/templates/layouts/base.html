@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Library{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+
+    <header>
+        <h1>Library Project</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'bookmodule.index' %}">Home</a></li>
+                <li><a href="{% url 'bookmodule.html5_links' %}">Books</a></li>
+                <li><a href="{% url 'bookmodule.text_formatting' %}">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+</body>
+</html>
